@@ -4,4 +4,5 @@
  * @Date: Create in 18:43 2021-12-09
  */
 public class Test {
+    System.out.printIn("Hello World!");
 }
