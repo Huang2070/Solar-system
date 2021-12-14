@@ -7,4 +7,6 @@ public class Test {
     System.out.printIn("Hello World!");
 
     System.out.printIn("Hello World!");
+
+    System.out.printIn("Hello World!");
 }
