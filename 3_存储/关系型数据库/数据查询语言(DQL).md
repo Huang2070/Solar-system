@@ -1,3 +1,5 @@
+
+
 # limit
 select * from table limit m,n  
 其中m是指记录开始的index，从0开始，表示第一条记录,
@@ -7,10 +9,83 @@ select * from tablename limit 2,4
 
 # join
 ![avatar](./resource/join.jpg)
+## join后on和where的区别
+on比where起作用更早，先根据on条件进行多表的连接操作和筛选，生成一个临时表, 临时表的记录再通过where来筛选.
 
-<br/>
-<br/>
-<br/>
+下面的例子来说明区别:  
+
+建立两张简单的用来测试的表并添加数据，如下所示，一张表名为id_name，另一张表名为id_age.
+id|name
+-|-
+1|a
+2|b
+3|c
+4|d
+5|e
+
+id|age
+-|-
+1|19
+2|22
+3|21
+4|22
+
+<br>
+<br>
+
+**1.不添加条件**
+```sql
+select * from id_name t1 left join id_age t2
+on t1.id = t2.id;
+```
+结果
+id|name|id1|age
+-|-|-|-
+1|a|1|19
+2|b|2|22
+3|c|3|21
+4|d|4|22
+5|e|
+
+<br>
+<br>
+
+**2.运行where条件**
+```sql
+select * from id_name t1 left join id_age t2
+on t1.id = t2.id
+where t2.age = 22;
+```
+结果
+id|name|id1|age
+-|-|-|-
+2|b|2|22
+4|d|4|22
+
+说明where条件是在left join操作完成后所进行的条件筛选.
+
+<br>
+<br>
+
+**3.运行on加条件**
+```sql
+
+select * from id_name t1 left join id_age t2
+on t1.id = t2.id and t2.age = 22;
+```
+结果
+id|name|id1|age
+-|-|-|-
+2|b|2|22
+4|d|4|22
+1|a
+3|c
+5|e
+
+说明on条件是在left join之前先进行条件筛选，而后才对两个表格join操作.
+
+<br>
+<br>
 
 # case when
 
@@ -116,7 +191,40 @@ GROUP BY country;
 ```
 
 
+# where 和 having
+
+>“Where” 是一个约束声明，使用Where来约束来之数据库的数据，Where是在结果返回之前起作用的，且Where中不能使用聚合函数。  
+“Having”是一个过滤声明，是在查询返回结果集以后对查询结果进行的过滤操作，在Having中可以使用聚合函数。
+
+SQL语言中一种特殊的函数。例如SUM, COUNT, MAX, AVG等。这些函数和其它函数的根本区别就是它们一般作用在多条记录上。
+
+如：
+SELECT SUM(population) FROM vv_t_bbc ;
+ 
+这里的SUM作用在所有返回记录的population字段上，结果就是该查询只返回一个结果，即所有国家的总人口数。
+
+而通过使用GROUP BY 子句，可以让SUM 和 COUNT 这些函数对属于一组的数据起作用。当你指定 GROUP BY region 时，只有属于同一个region（地区）的一组数据才将返回一行值，也就是说，表中所有除region（地区）外的字段，只能通过 SUM, COUNT等聚合函数运算后返回一个值。
+
+下面再说说“HAVING”和“WHERE”：HAVING子句可以让我们筛选成组后的各组数据，WHERE子句在聚合前先筛选记录．也就是说作用在GROUP BY 子句和HAVING子句前；而 HAVING子句在聚合后对组记录进行筛选。
 
 ```sql
+#显示每个地区的总人口数和总面积
+SELECT region, SUM(population), SUM(area)
+FROM bbc
+GROUP BY region
 
+#显示每个地区的总人口数和总面积．仅显示那些人口数量超过1000000的地区。
+SELECT region, SUM(population), SUM(area)
+FROM bbc
+GROUP BY region
+HAVING SUM(population)>1000000
+
+#在这里，我们不能用where来筛选超过1000000的地区，因为表中不存在这样一条记录。相反，HAVING子句可以让我们筛选成组后的各组数据．
 ```
+
+用having就一定要和group by连用，
+用group by不一有having（它只是一个筛选条件用的）
+
+只要条件里面的字段, 不是表里面原先有的字段就需要用having。
+
+

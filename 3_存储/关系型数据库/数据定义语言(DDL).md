@@ -1,3 +1,5 @@
+* 查询列: show columns from 表名;
+* 查询索引: show keys from 表名;
 * 查看表的字段信息：desc 表名;
 * 查看表的所有信息：show create table 表名;
 * 添加主键约束：alter table 表名 add constraint 主键 （形如：PK_表名） primary key 表名(主键字段);
