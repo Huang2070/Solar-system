@@ -1,4 +1,12 @@
-
+- [limit](#limit)
+- [join](#join)
+  - [join后on和where的区别](#join后on和where的区别)
+- [case when](#case-when)
+  - [语法](#语法)
+  - [用法](#用法)
+    - [已知数据按照另外一种方式进行分组](#已知数据按照另外一种方式进行分组)
+    - [用一个SQL语句完成不同条件的分组](#用一个sql语句完成不同条件的分组)
+- [where 和 having](#where-和-having)
 
 # limit
 select * from table limit m,n  
