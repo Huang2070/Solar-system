@@ -10,7 +10,7 @@
 * 采用了非阻塞I/O多路复用机制.
 
 说明
-![avatar](./Redis.png)
+![avatar](/resource/Redis.png)
 参照上图，简单来说，就是我们的redis-client在操作的时候，会产生具有不同事件类型的socket。在服务端，有一段I/O多路复用程序，将其置入队列之中。然后，文件事件分派器，依次去队列中取，转发到不同的事件处理器中。
 需要说明的是，这个I/O多路复用机制，redis还提供了select、epoll、evport、kqueue等多路复用函数库，大家可以自行去了解。
 

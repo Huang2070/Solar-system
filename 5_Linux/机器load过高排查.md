@@ -38,7 +38,7 @@ $cat /proc/loadavg
 # top
 通过top命令看到这是一个load过高的机器.
 
-![avatar](./resource/load%E8%BF%87%E9%AB%98%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5.png)
+![avatar](/resource/load%E8%BF%87%E9%AB%98%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5.png)
 
 top命令的结果告诉我们系统无论是CPU还是IO，压力都没有那么大。但是有一个疑点：running进程的数量比预想中的要少，根据running的数量去换算load值完全对不上。
 
@@ -49,7 +49,7 @@ top命令的结果告诉我们系统无论是CPU还是IO，压力都没有那么
 ps -elf r
 ```
 通过 ps -elf r 命令可以列举当前处于running的`进程`.
-![avatar](./resource/load过高问题排查2.png)
+![avatar](/resource/load过高问题排查2.png)
 
 上面说load高可能是R状态和D状态的进程导致的, 通过的"ps -elf r"命令可以确定本例几乎没有D状态的进程。
 
@@ -60,7 +60,7 @@ ps -elf r
 ```
 ps -eLo tid,comm,stat | awk '$3 ~ /R.*/'
 ```
-![avatar](./resource/load%E8%BF%87%E9%AB%98%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A53.png)
+![avatar](/resource/load%E8%BF%87%E9%AB%98%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A53.png)
 这里能和第一张图的load对应上.
 
 从这里能查到系统正在运行的线程来排查问题.

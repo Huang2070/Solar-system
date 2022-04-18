@@ -16,7 +16,7 @@ select * from tablename limit 2,4
 即取出第3条至第6条，4条记录.
 
 # join
-![avatar](./resource/join.jpg)
+![avatar](/resource/join.jpg)
 ## join后on和where的区别
 on比where起作用更早，先根据on条件进行多表的连接操作和筛选，生成一个临时表, 临时表的记录再通过where来筛选.
 
