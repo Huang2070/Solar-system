@@ -1,6 +1,6 @@
 # 注册中心
 
-HSF的注册中心用的configServer, dubbo用的是zookeeper.
+`HSF的注册中心用的configServer, dubbo用的是zookeeper.`
 
 框架/工具/产品在实现的时候，都考虑到了容灾，扩展，负载均衡，于是出现一个配置中心(ConfigServer)的东西来解决这些问题。
 
