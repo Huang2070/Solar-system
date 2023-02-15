@@ -1,3 +1,4 @@
 # StringUtils
-* StringUtils.removeEndIgnoreCase, 删除后缀.
+* 删除后缀: StringUtils.removeEndIgnoreCase.
 
+# 
