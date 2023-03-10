@@ -21,9 +21,14 @@ import org.apache.commons.lang3.StringUtils;
 public class RSAUtil {
 
     /**
-     * 加密算法RSA
+     * RSA
      */
     public static final String KEY_ALGORITHM = "RSA";
+
+    /**
+     * SHA256withRSA
+     */
+    public static final String KEY_ALGORITHM = "SHA256withRSA";
 
 
     /**

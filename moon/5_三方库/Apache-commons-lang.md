@@ -26,3 +26,5 @@ StringUtils.isAnyBlank():同时验证多个字符串是否为空，任意为空�
 StringUtils.isNoneBlank():都不为空，上一个取反。
 
 StringUtils.isAllBlank():所有都是空。
+
+StringUtils.removeEndIgnoreCase: 删除后缀.
