@@ -16,6 +16,7 @@ public class BizService implements BeanNameAware {
         this.beanName = s;
     }
 
+    //这里可以获取bean的名称
     public String getBeanName() {
         return beanName;
     }

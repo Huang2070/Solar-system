@@ -8,7 +8,7 @@
 ```
 
 
-# 代码
+# http请求工具
 ``` Java
 import com.alibaba.fastjson.JSON;
 import org.apache.http.HttpEntity;
@@ -396,4 +396,26 @@ public class HttpUtil {
 
 }
 
+```
+
+
+
+# 替换URL中的参数
+``` Java
+ /**
+     * 替换url中的参数
+     * @param url
+     * @param paramName 要替换的参数名
+     * @param paramValue 要替换的参数值
+     * @return
+     * @throws URISyntaxException
+     */
+    public static String replaceUrlParam(String url, String paramName, String paramValue) throws URISyntaxException {
+        URIBuilder builder = new URIBuilder(url);
+        List<NameValuePair> params = builder.getQueryParams();
+        params = params.stream().filter(item -> !paramName.equals(item.getName())).collect(Collectors.toList());
+        builder.clearParameters().addParameters(params);
+        builder.addParameter(paramName, paramValue);
+        return builder.toString();
+    }
 ```
