@@ -12,6 +12,9 @@ body体方式传参数, json格式
 
 curl -H "Content-Type:application/json" -H "Data_Type:msg" -X POST --data '{"positionCodes":"ALIPAY_MINI_APP_HOME_BANNER_V2"}' http://127.0.0.1:7001/distribute/getResourceListWithToken?
 
+### get请求
+get请求要把加引号, 不然传参只能传第一个参数.
+
 
 ## 查看出口IP
 * curl ipinfo.io

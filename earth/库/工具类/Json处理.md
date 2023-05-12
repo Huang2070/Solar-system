@@ -1,3 +1,4 @@
+# 校验JSON
 ```Java
 import com.alibaba.fastjson.JSON;
 import org.apache.commons.lang3.StringUtils;
@@ -53,4 +54,11 @@ public class JsonUtils {
         }
     }
 }
+```
+
+
+# JSONArray排序
+``` Java
+//根据array中对象里time成员排序.
+logArray.sort(Comparator.comparing(obj -> ((JSONObject) obj).getDate("time")));
 ```
