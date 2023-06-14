@@ -29,5 +29,5 @@ get请求要把加引号, 不然传参只能传第一个参数.
 
 
 ## grep
-* cat access.log | grep -v nginx_status  排除文件中包含nginx_status的行
+* -v, 排除某个字符串. 示例:cat access.log | grep -v nginx_status  排除文件中包含nginx_status的行.
 * 
