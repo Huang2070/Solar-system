@@ -419,3 +419,14 @@ public class HttpUtil {
         return builder.toString();
     }
 ```
+
+
+
+# 新增URL中的参数
+```Java
+public static String addUrlParam(String url, String paramName, String paramValue) throws URISyntaxException {
+        URIBuilder builder = new URIBuilder(url);
+        builder.addParameter(paramName, paramValue);
+        return builder.toString();
+    }
+```
