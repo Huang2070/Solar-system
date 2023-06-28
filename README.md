@@ -24,6 +24,7 @@
   * idea
   * mac
   * maven
+  * docker
 * 常见场景
 * 面试
 * 架构
@@ -33,6 +34,16 @@
 
 
 # earth-moon
+
+
+# kuiper belt
+* Android
+* iOS
+* R语言
+* Python
+* JavaScript
+* C++
+* C
 
 
 # mars
@@ -54,3 +65,4 @@
 * 计算机原理
 * 人工智能
 * 信息安全
+* 软件工程
