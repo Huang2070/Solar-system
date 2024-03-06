@@ -1,7 +1,7 @@
 # 需求
 1.根据参数的key值升序排列, 以key=value&key1=value1的形式拼接起来, 得到basestr字符串。
 
-2.将basestr字符串加上key,进行MD5值（MD5(basestr+ key)）计算得到sign值xx。
+2.将basestr字符串加上secret,进行MD5值（MD5(basestr+ secret)）计算得到sign值xx。
 
 
 # 写法
@@ -24,7 +24,7 @@ public static String getSign(Map<String, Object> param) {
 
     String orderParamStr = stringBuilder.substring(0, stringBuilder.length() - 1);
 
-    String md5Str = orderParamStr + key;
+    String md5Str = orderParamStr + secret;
     return SignUtil.md5(md5Str);
 }
 ```
