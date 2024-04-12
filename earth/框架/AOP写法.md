@@ -21,7 +21,6 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.core.annotation.AnnotationUtils;
 
 /**
- * 手机号运营商信息校验
  * @author huangjin
  */
 @Aspect
