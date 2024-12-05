@@ -1,12 +1,7 @@
-package com.huangjin.testthread;
-
 import org.junit.Test;
-
 import java.util.concurrent.*;
 
-/**
- * Created by huang on 2018-11-14.
- */
+
 public class CountDownLatchTest {
 
     private static final int THREAD_POOL_CORE_SIZE = 5;// 线程池最少线程数
