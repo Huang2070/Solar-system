@@ -1,4 +1,4 @@
-# earth
+# Java技术
 * 基础
 * 多线程
 * JVM
@@ -33,20 +33,7 @@
 * 稳定性
 
 
-# earth-moon
-
-
-# kuiper belt
-* Android
-* iOS
-* R语言
-* Python
-* JavaScript
-* C++
-* C
-
-
-# mars
+# 互联网
 * 职业发展
 * 运营
 * 电商
@@ -56,7 +43,18 @@
 * 芯片
 * 区块链
 
-# sun
+
+# 计算机技术
+* Android
+* iOS
+* R语言
+* Python
+* JavaScript
+* C++
+* C
+
+
+# 计算机科学
 * 算法
 * Linux
 * 操作系统
