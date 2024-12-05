@@ -28,3 +28,21 @@ public static String getSign(Map<String, Object> param) {
     return SignUtil.md5(md5Str);
 }
 ```
+
+
+
+# 函数式参数排序方法 
+```Java
+//params是Map<String, String>类型的参数键值对, 获取key=value的list,通过&拼接
+String concatStr = params.entrySet().stream()
+    //过滤value是null的字段
+    .filter(paramEntry -> Objects.nonNull(paramEntry.getValue()))
+    //过滤签名字段
+    .filter(e -> !Objects.equals(e.getKey(), "sign"))
+    //排序
+    .sorted(Map.Entry.comparingByKey())
+    //拼接
+    .map(e -> e.getKey() + "=" + e.getValue()).collect(Collectors.joining("&"));
+```
+
+
