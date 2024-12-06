@@ -2,6 +2,8 @@
 阿里微服务生态全景图
 https://start.aliyun.com/ecosystem.html?spm=a2ck6.14145464.0.0.503c7f235yaJ0c
 
+阿里云产品选型学习
+
 Java云原生应用脚手架
 https://start.aliyun.com/
 
@@ -55,3 +57,6 @@ https://mp.weixin.qq.com/s/1mBorW_B2xvJ_8FjE_JrCw
 12020336860
 11020306402
 11000267616
+11000253865
+
+
