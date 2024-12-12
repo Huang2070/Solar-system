@@ -30,3 +30,7 @@
 3. 恢复到某版本: git reset --hard codeVersion
 4. 提交到远程分支: git push -f
 
+
+
+# 其它
+* 删除所有本地分支: git branch | xargs git branch -d
