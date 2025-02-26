@@ -14,3 +14,19 @@ https://mp.weixin.qq.com/s/GRTEdcr9bdPrHKR8CGLdsw
 11000236502
 11020226028
 11020376406
+11020227219
+12020368887
+11020324485
+https://mp.weixin.qq.com/s/fwXnVzVO5-a_OMIXrweI4g
+
+
+
+
+本地部署LLM
+Ollama
+webui, Chatbox
+微调
+
+12020372040
+11020314441
+11020372529
