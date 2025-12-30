@@ -30,7 +30,6 @@ https://mp.weixin.qq.com/s/fwXnVzVO5-a_OMIXrweI4g
 本地部署LLM
 Ollama
 webui, Chatbox
-微调
 
 12020372040
 11020314441
